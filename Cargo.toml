@@ -1,0 +1,26 @@
+[package]
+name = "rusgrillas"
+version = "0.1.0"
+edition = "2021"
+authors = ["drew <drew@example.com>"]
+description = "A Rust homage to the classic QBASIC GORILLA.BAS game, with procedurally generated cityscapes and simple pixel art using Bevy."
+
+[dependencies]
+bevy = { version = "0.13", default-features = false, features = [
+    "bevy_winit",
+    "x11",
+    "wayland",
+    "bevy_render",
+    "bevy_core_pipeline",
+    "bevy_sprite",
+    "bevy_text",
+    "bevy_ui",
+] }
+rand = "0.8"
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+opt-level = 3
+
